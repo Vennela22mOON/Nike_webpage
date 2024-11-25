@@ -1,0 +1,206 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav li {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav li:hover {
+  color: red;
+}
+
+/* Section Layout */
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+/* Left Section */
+.left-section {
+  flex: 1;
+  background-color: #f8dede;
+  padding: 2rem;
+}
+
+.left-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.left-section button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.left-section button:hover {
+  background-color: darkred;
+}
+
+/* Right Section */
+.right-section {
+  flex: 1;
+  padding: 2rem;
+}
+
+.right-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.right-section .buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.right-section button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.right-section .red-button {
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.right-section .red-button:hover {
+  background-color: darkred;
+}
+
+.right-section .outline-button {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+}
+
+.right-section .outline-button:hover {
+  color: white;
+  background-color: red;
+}
+
+.right-section .sample-images img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.right-section .sample-images img:hover {
+  transform: scale(1.1);
+}
+
+/* Product Section */
+.product-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.product-card {
+  background: white;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.product-card h3 {
+  margin: 0.5rem 0;
+}
+
+.product-card p {
+  margin: 0.5rem 0;
+}
+
+.product-card .price {
+  color: red;
+  font-weight: bold;
+}
+
+.product-card button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: darkred;
+}
+
+/* Animation Styles */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideInFromLeft 1s ease-out;
+}
